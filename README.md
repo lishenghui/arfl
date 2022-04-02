@@ -2,7 +2,7 @@
 
 This repository contains the code and experiments for the paper:
 
-[Auto-weighted Robust Federated Learning with Corrupted Data Sources](https://arxiv.org/abs/2101.05880)
+[Auto-weighted Robust Federated Learning with Corrupted Data Sources](https://dl.acm.org/doi/10.1145/3517821)
 
 ## Datasets
 
