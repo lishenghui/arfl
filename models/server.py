@@ -110,26 +110,6 @@ class Server:
         return [(c.num_train_samples, c.num_test_samples) for c in self.selected_clients]
 
     def train_model(self, num_epochs, batch_size, round):
-        """Trains self.model on given clients.
-        
-        Trains model on self.selected_clients if clients=None;
-        each client's data is trained with the given number of epochs
-        and batches.
-
-        Args:
-            clients: list of Client objects.
-            num_epochs: Number of epochs to train.
-            batch_size: Size of training batches.
-            minibatch: fraction of client's data to apply minibatch sgd,
-                None to use FedAvg
-        Return:
-            bytes_written: number of bytes written by each client to server 
-                dictionary with client ids as keys and integer values.
-            client computations: number of FLOPs computed by each client
-                dictionary with client ids as keys and integer values.
-            bytes_read: number of bytes read by each client from server
-                dictionary with client ids as keys and integer values.
-        """
         clients = self.selected_clients
         num_clients = len(clients)
 

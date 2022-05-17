@@ -3,12 +3,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 def cosine_similarity_lists(a, b):
-    # vec1, vec2 = [], []
-    # # t = time.time()
-    # for e1, e2 in zip(a, b):
-    #     vec1.extend(e1.flatten())
-    #     vec2.extend(e2.flatten())
-    # print('cosine_time cost:', time.time() - t)
     cosine = cosine_similarity(np.array(a).reshape(1, -1), np.array(b).reshape(1, -1))
 
     return cosine
